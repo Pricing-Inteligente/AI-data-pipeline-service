@@ -1,14 +1,24 @@
-Instrucción: Extrae la siguiente información del Texto del producto: Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad. Responde únicamente con el formato: "Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad".
+Instrucción: Extrae la siguiente información del Texto del producto: Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad. Infiera la moneda basada en el contexto (por ejemplo, si menciona México, usa MXN; si Chile, CLP; si no se especifica, usa NA). Responde únicamente con el formato: "Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad". NO agregues texto extra, explicaciones ni descripciones. Solo los valores en ese orden exacto.
 
 Ejemplo 1:
-Texto: Marca: Bimbo COP $7.850 (COP $15.70 / gramo)El Pan Tajado Bimbo Artesano es la elección perfecta para quienes buscan un sabor auténtico y una textura inigualable. Ideal para toda la familia.Presentación en bolsa de 500 gramos.Unidad de Venta: Bolsa 500g
+Texto: (Marca: Bimbo COP $7850 (COP $15.70 / gramo)
+El Pan Tajado Bimbo Artesano es la elección perfecta para quienes buscan un sabor auténtico y una textura inigualable. 
+Ideal para toda la familia.Presentación en bolsa de 500 gramos. Unidad de Venta: Bolsa 500g)
 Respuesta: Pan, 7850, COP, Bimbo, 500, gramos
 ###
 
 Ejemplo 2:
-Texto: Consume leche Alpura COP $1800.550 La Leche Entera Alpura es fresca y nutritiva, ideal para toda la familia. Presentación en botella de 1 litro. Unidad de Venta: Botella 1L
-Respuesta: Leche, 1800.550, COP, Alpura, 1, litro
+Texto: (Consume leche Alpura $18.50 La Leche Entera Alpura es fresca y nutritiva, ideal para toda la familia. 
+Presentación en botella de 1 litro. Unidad de Venta: Botella 1L)
+Respuesta: Leche, 18.50, MXN, Alpura, 1, litro
 ###
 
-Texto: {PRODUCT_TEXT_PLACEHOLDER}
-Respuesta: 
+Ejemplo 3:
+Texto: (Yogurt Natural Danone $121.50 El Yogurt Natural 
+Danone es cremoso y saludable, perfecto para desayunos en Chile. Unidad de Venta: Vaso 200g)
+Respuesta: Yogurt, 121.50, CLP, Danone, 200, g
+###
+
+Respuesta Phi-2:
+Texto: ({PRODUCT_TEXT_PLACEHOLDER})
+Respuesta:
