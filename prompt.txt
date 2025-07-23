@@ -1,0 +1,14 @@
+Instrucción: Extrae la siguiente información del Texto del producto: Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad. Responde únicamente con el formato: "Tipo de alimento, Precio, Moneda, Marca, Cantidad, Unidad".
+
+Ejemplo 1:
+Texto: Marca: Bimbo COP $7.850 (COP $15.70 / gramo)El Pan Tajado Bimbo Artesano es la elección perfecta para quienes buscan un sabor auténtico y una textura inigualable. Ideal para toda la familia.Presentación en bolsa de 500 gramos.Unidad de Venta: Bolsa 500g
+Respuesta: Pan, 7850, COP, Bimbo, 500, gramos
+###
+
+Ejemplo 2:
+Texto: Consume leche Alpura COP $1800.550 La Leche Entera Alpura es fresca y nutritiva, ideal para toda la familia. Presentación en botella de 1 litro. Unidad de Venta: Botella 1L
+Respuesta: Leche, 1800.550, COP, Alpura, 1, litro
+###
+
+Texto: {PRODUCT_TEXT_PLACEHOLDER}
+Respuesta: 
